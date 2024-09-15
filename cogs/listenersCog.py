@@ -1,10 +1,7 @@
-import threading
-import time
 from discord.ext import commands
 from pypresence import Presence
 from player import Player
 import discord
-from modals.estateModal import EstateModal
 
 
 class ListenersCog(commands.Cog):
@@ -79,9 +76,3 @@ class ListenersCog(commands.Cog):
                 player.points += 1
                 player.save()
                 print(f"Points de {original_message.author.id} mis à jour (réponse): {player.points}")  
-
-    @commands.Cog.listener()
-    async def on_interaction(self, interaction: discord.Interaction):
-        if interaction.type == discord.InteractionType.component and interaction.data['custom_id'] == "open_estate_modal":
-            modal = EstateModal()
-            await interaction.response.send_modal(modal) 

@@ -1,5 +1,4 @@
 from asyncio import tasks
-import asyncio
 import threading
 import time
 import discord
@@ -10,7 +9,6 @@ from player import Player  # Assurez-vous que c'est bien la classe que vous impo
 from battleManager import BattleManager
 from typeDef.hopistal import Hospital
 from typeDef.army import Army
-from discord import app_commands
 
 
 class PlayerCog(commands.Cog):

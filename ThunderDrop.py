@@ -6,7 +6,7 @@ from cogs.playerCog import PlayerCog
 from cogs.listenersCog import ListenersCog
 from cogs.paramCog import ParamCog  
 from player import Player
-from typeDef.hopistal  import Hospital
+from embeds.hopistal  import Hospital
 
 
 import logging
